@@ -1,0 +1,73 @@
+﻿<Window x:Class="Game_Test1.Games.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Test1.Games"
+        mc:Ignorable="d"
+        Title="Game" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="29*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Сытось:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="188" FontSize="15"/>
+            <TextBlock Height="33" Margin="5, 5, 0, 0" x:Name="TextBoxSatiety" Text="100"/>
+            <Label Content="Усталость:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="188" FontSize="15"/>
+            <TextBlock Height="33" Margin="5, 5, 0, 0" x:Name="TextBoxFatigue" Text="100"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="0,12,0,0">
+            <Button x:Name="BtToday" Content="След.День" Height="43" VerticalAlignment="Top" Width="159" Margin="0, 10, 0, 0" Click="BtToday_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="30, 0, 0, 0">
+            <Label>Число энергетиков:</Label>
+            <TextBlock Height="33" Margin="5, 5, 0, 0" x:Name="TextToDay" Text="1" />
+        </StackPanel>
+            
+            <Button Content="Назад в меню" Height="43" VerticalAlignment="Top" Width="159" Click="BtBack" Margin="0, 10, 0, 0"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Label x:Name="Label1_1" Content="Деньги:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="188" FontSize="15"/>
+            <TextBlock Height="33" Margin="5, 5, 0, 0" x:Name="TextMoney" Text="0" />
+            <Label Content="День:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="188" FontSize="15"/>
+            <TextBlock Height="33" Margin="5, 5, 0, 0" x:Name="TextDay" Text="1" />
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,12,0,0">
+            <Button Content="Работать" Height="43" VerticalAlignment="Top" Width="159" Margin="0, 10, 0, 0" Click="BtClickWorck"/>
+
+            <StackPanel Orientation="Horizontal" Margin="30, 0, 0, 0">
+                <Label>Кол-во денег за клик:</Label>
+                <TextBlock  x:Name="TextCollX" Text="2" Margin="1, 5, 0, 2" />
+            </StackPanel>
+            <Button Content="Прибавка работу" Height="43" VerticalAlignment="Top" Width="159" Click="BtPlusWorck" Margin="0, 10, 0, 0"/>
+            <StackPanel Orientation="Horizontal" Margin="30, 0, 0, 0">
+                <Label>Кол-во Прибавки клик:</Label>
+                <TextBlock x:Name="TextCollY" Text="1" Margin="1, 5, 0, 2"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
+                <Label>Стоимость:</Label>
+                <TextBlock x:Name="TextCollYm" Text="50" Margin="1, 5, 0, 2"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,12,0,0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Скушать пирожок" Height="43" VerticalAlignment="Top" Width="160" Margin="30, 10, 0, 0" Click="BtPie"/>
+                <Button Content="Выпить энегретик" Height="43" VerticalAlignment="Top" Width="160" Margin="20, 10, 0, 0" Click="BtWer"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="70, 0, 0, 0">Стоимость:</Label>
+                <TextBlock x:Name="TextBuyPie" Text="20" Margin="0, 5, 0, 2"/>
+                <Label Margin="90, 0, 0, 0">Стоимость:</Label>
+                <TextBlock x:Name="TextBuyEnergy" Text="10" Margin="0, 5, 0, 2"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
